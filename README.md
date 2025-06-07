@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # PasswordGenerator
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.1.1.
@@ -25,3 +26,7 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+=======
+# Password-generator
+A simple and customizable password generator built with Angular. It allows users to generate strong, secure passwords based on selected criteria such as length, inclusion of uppercase/lowercase letters, numbers, and special characters.
+>>>>>>> 925b9ee3423b5f9756e1abef34001e4796c0a32a
