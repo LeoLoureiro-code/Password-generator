@@ -1,0 +1,21 @@
+@import "../../styles.scss";
+
+.generator-div{
+    height: 540px;
+    width: 345px;
+}
+
+h1{
+    color: #817D92;
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 1rem;
+
+}
+
+.options{
+    background-color: $generator-background;
+    width: 343px;
+    height: 423px;
+    padding: 1rem;
+}
