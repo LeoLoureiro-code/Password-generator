@@ -1,6 +1,35 @@
 @import "../../styles.scss";
 
+.slider-paragraph-div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
 .slider-paragraph{
     color: $white;
-    font-size: 16px;
+    font-size: 20px;
+}
+
+.character-number{
+    color: $green;
+    font-size: 28px;
+}
+
+.slider{
+    width: 100%;
+    margin: 1.5rem 0 1.5rem 0;
+    appearance: none;
+    height: 10px;
+    background: $darkgray;
+    transition: 0.2s;
+}
+
+.slider::-webkit-slider-thumb{
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    background: $white;
+    border-radius: 50%;
+    cursor: pointer;
 }
