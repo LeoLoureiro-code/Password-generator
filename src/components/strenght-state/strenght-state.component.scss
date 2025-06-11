@@ -1,0 +1,31 @@
+@import "../../styles.scss";
+
+.strenght-state-div{
+    width: 311px;
+    height: 56px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: $darkgray;
+    margin: 1rem 0 1rem 0;
+    padding: 0.5rem;
+}
+
+.strenght-state-paragraph{
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.strenght-state-options-div{
+    display: flex;
+    justify-content: space-evenly;
+    width: 64px;
+    height: 28px;
+}
+
+.strenght-state-option{
+    height: 28px;
+    width: 10px;
+    border: 2px solid $white;
+    background-color: transparent;
+}
