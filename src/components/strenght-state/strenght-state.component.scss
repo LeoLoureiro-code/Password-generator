@@ -2,13 +2,18 @@
 
 .strenght-state-div{
     width: 311px;
-    height: 56px;
+    height: 60px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     background-color: $darkgray;
     margin: 1rem 0 1rem 0;
     padding: 0.5rem;
+
+    @media screen and (min-width: $tablet){
+        width: 100%;
+        margin-bottom: 3rem;
+    }
 }
 
 .strenght-state-paragraph{

@@ -3,6 +3,15 @@
 .generator-div{
     height: 540px;
     width: 345px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    @media screen and (min-width: $tablet){
+        width: 540px;
+        height: 696px;
+    }
 }
 
 h1{
@@ -16,16 +25,25 @@ h1{
 .options{
     background-color: $generator-background;
     width: 343px;
-    height: 423px;
     padding: 1rem;
+
+    @media screen and (min-width: $tablet){
+        width: 540px;
+        height: 696px;
+        padding: 2rem;
+    }
 }
 
 .generate-btn{
     width: 311px;
-    height: 56px;
+    height: 60px;
     background-color: $green;
     border: none;
     outline: none;
     font-size: 20px;
     font-weight: 700;
+
+    @media screen and (min-width: $tablet){
+        width: 100%;
+    }
 }
