@@ -1,7 +1,6 @@
 @import "../../styles.scss";
 
 .checkbox-div{
-    width: 280px;
     height: 131px;
     display: flex;
     flex-direction: column;
@@ -19,10 +18,15 @@ input, label{
 
 input[type='checkbox']{
     margin-right: 1rem;
+    accent-color: $green;
 
     @media screen and (min-width: $tablet){
-        margin-top:  0rem;;
+        margin-top:  0.5rem;;
     }
+}
+
+input[type='checkbox']:hover{
+    cursor: pointer;
 }
 
 label{
