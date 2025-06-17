@@ -59,37 +59,55 @@ export class GeneratorService {
     this.passwordLength = value;
   }
 
-  CreatePassword(): void{
-    let allChars: string[] = [];
+  generatePassword(): void {
+  let availableChars: string[] = [];
+  let guaranteedChars: string[] = [];
 
   if (this._includeLowerLetter) {
-    allChars = allChars.concat(this.lowercaseLetters);
+    availableChars = availableChars.concat(this.lowercaseLetters);
+    guaranteedChars.push(this.getRandomChar(this.lowercaseLetters));
   }
 
   if (this._includeUpperLetter) {
-    allChars = allChars.concat(this.uppercaseLetters);
+    availableChars = availableChars.concat(this.uppercaseLetters);
+    guaranteedChars.push(this.getRandomChar(this.uppercaseLetters));
   }
 
   if (this._includeNumbers) {
-    allChars = allChars.concat(this.numbers);
+    availableChars = availableChars.concat(this.numbers);
+    guaranteedChars.push(this.getRandomChar(this.numbers));
   }
 
   if (this._includeSymbols) {
-    allChars = allChars.concat(this.symbols);
+    availableChars = availableChars.concat(this.symbols);
+    guaranteedChars.push(this.getRandomChar(this.symbols));
   }
 
-  if (allChars.length === 0) {
+  if (availableChars.length === 0 || this.passwordLength < guaranteedChars.length) {
     this.generatedPassword = '';
     return;
   }
 
-  let password = '';
-  for (let i = 0; i < this.passwordLength; i++) {
-    const randomIndex = Math.floor(Math.random() * allChars.length);
-    password += allChars[randomIndex];
+  const remainingLength = this.passwordLength - guaranteedChars.length;
+  for (let i = 0; i < remainingLength; i++) {
+    guaranteedChars.push(this.getRandomChar(availableChars));
   }
 
-  this.generatedPassword = password;
-  }
 
+  this.generatedPassword = this.shuffleArray(guaranteedChars).join('');
+}
+
+private getRandomChar(charArray: string[]): string {
+  const index = Math.floor(Math.random() * charArray.length);
+  return charArray[index];
+}
+
+private shuffleArray(array: string[]): string[] {
+
+  for (let i = array.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [array[i], array[j]] = [array[j], array[i]];
+  }
+  return array;
+}
 }
