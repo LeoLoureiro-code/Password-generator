@@ -1,18 +1,25 @@
 <div class="checkbox-div">
-    <div class="input-div">
-        <input type="checkbox" id="upper" name="upper" value="upper" class="inputCheckbox">
-        <label for="upper">Include Uppercase Letters</label>
-    </div>
-    <div class="input-div">
-        <input type="checkbox" id="lower" name="lower" value="lower" class="inputCheckbox">
-        <label for="upper">Include Lowercase Letters</label>
-    </div>
-    <div class="input-div">
-        <input type="checkbox" id="number" name="number" value="number" class="inputCheckbox">
-        <label for="numbers">Include Numbers</label>
-    </div>
-    <div class="input-div">
-        <input type="checkbox" id="symbol" name="symbol" value="symbol" class="inputCheckbox">
-        <label for="numbers">Include Symbols</label>
-    </div>
+<div class="input-div">
+    <input type="checkbox" id="upper" class="inputCheckbox"
+        (change)="setUpper(($event.target as HTMLInputElement).checked)">
+    <label for="upper">Include Uppercase Letters</label>
+</div>
+
+<div class="input-div">
+    <input type="checkbox" id="lower" class="inputCheckbox"
+        (change)="setLower($event.target.checked)">
+    <label for="lower">Include Lowercase Letters</label>
+</div>
+
+<div class="input-div">
+    <input type="checkbox" id="number" class="inputCheckbox"
+        (change)="setNumbers($event.target.checked)">
+    <label for="number">Include Numbers</label>
+</div>
+
+<div class="input-div">
+    <input type="checkbox" id="symbol" class="inputCheckbox"
+        (change)="setSymbols($event.target.checked)">
+    <label for="symbol">Include Symbols</label>
+</div>
 </div>
