@@ -7,7 +7,27 @@ import { GeneratorService } from '../../services/generator/generator.service';
 })
 export class CheckboxComponent {
 
-  constructor(private generatorService: GeneratorService) {}
+  constructor(public generatorService: GeneratorService) {}
+
+onUpperChange(event: Event): void {
+  const input = event.target as HTMLInputElement;
+  this.generatorService.SetUpperCase = input.checked;
+}
+
+onLowerChange(event: Event): void {
+  const input = event.target as HTMLInputElement;
+  this.generatorService.SetLowerCase = input.checked;
+}
+
+onNumbersChange(event: Event): void {
+  const input = event.target as HTMLInputElement;
+  this.generatorService.SetNumbers = input.checked;
+}
+
+onSymbolsChange(event: Event): void {
+  const input = event.target as HTMLInputElement;
+  this.generatorService.SetSymbols = input.checked;
+}
 
   setUpper(value: boolean) {
     this.generatorService.SetUpperCase = value;
