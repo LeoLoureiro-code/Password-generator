@@ -1,27 +1,30 @@
-<div class="input-div">
-<input type="checkbox" id="upper" class="inputCheckbox"
-    [checked]="generatorService.GetUpperCase"
-    (change)="onUpperChange($event)">
-<label for="upper">Include Uppercase Letters</label>
+<div class="checkbox-div">
+    <div class="input-div">
+    <input type="checkbox" id="upper" class="inputCheckbox"
+        [checked]="generatorService.GetUpperCase"
+        (change)="onUpperChange($event)">
+    <label for="upper">Include Uppercase Letters</label>
+    </div>
+
+    <div class="input-div">
+    <input type="checkbox" id="lower" class="inputCheckbox"
+        [checked]="generatorService.GetLowerCase"
+        (change)="onLowerChange($event)">
+    <label for="lower">Include Lowercase Letters</label>
+    </div>
+
+    <div class="input-div">
+    <input type="checkbox" id="number" class="inputCheckbox"
+        [checked]="generatorService.GetNumbers"
+        (change)="onNumbersChange($event)">
+    <label for="number">Include Numbers</label>
+    </div>
+
+    <div class="input-div">
+    <input type="checkbox" id="symbol" class="inputCheckbox"
+        [checked]="generatorService.GetSymbols"
+        (change)="onSymbolsChange($event)">
+    <label for="symbol">Include Symbols</label>
+    </div>
 </div>
 
-<div class="input-div">
-<input type="checkbox" id="lower" class="inputCheckbox"
-    [checked]="generatorService.GetLowerCase"
-    (change)="onLowerChange($event)">
-<label for="lower">Include Lowercase Letters</label>
-</div>
-
-<div class="input-div">
-<input type="checkbox" id="number" class="inputCheckbox"
-    [checked]="generatorService.GetNumbers"
-    (change)="onNumbersChange($event)">
-<label for="number">Include Numbers</label>
-</div>
-
-<div class="input-div">
-<input type="checkbox" id="symbol" class="inputCheckbox"
-    [checked]="generatorService.GetSymbols"
-    (change)="onSymbolsChange($event)">
-<label for="symbol">Include Symbols</label>
-</div>
