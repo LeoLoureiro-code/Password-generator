@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { GeneratorService } from '../../services/generator/generator.service';
 
 @Component({
   selector: 'app-slider',
@@ -9,4 +10,15 @@ import { Component } from '@angular/core';
 })
 export class SliderComponent {
 
+  sliderValue: number = 4;
+
+  constructor(private generatorService: GeneratorService){
+
+  }
+
+  changeSlider(event: Event){
+    const slider = event.target as HTMLInputElement;
+    this.generatorService.SetPasswordLength = Number(slider.value);
+    this.sliderValue = Number(slider.value);
+  }
 }
