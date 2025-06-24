@@ -65,6 +65,14 @@ export class GeneratorService {
     let availableChars: string[] = [];
     let guaranteedChars: string[] = [];
 
+    const nothingSelected = !this._includeLowerLetter && !this._includeUpperLetter &&
+                            !this._includeNumbers && !this._includeSymbols;
+
+  if (nothingSelected || this.passwordLength <= 0) {
+    this.passwordSubject.next('No option selected'); 
+    return;
+  }
+
     if (this._includeLowerLetter) {
       availableChars = availableChars.concat(this.lowercaseLetters);
       guaranteedChars.push(this.getRandomChar(this.lowercaseLetters));
@@ -113,4 +121,26 @@ export class GeneratorService {
     }
     return array;
   }
+
+  getStrengthLevel(): number {
+  let score = 0;
+
+  if (this._includeLowerLetter) score++;
+  if (this._includeUpperLetter) score++;
+  if (this._includeNumbers) score++;
+  if (this._includeSymbols) score++;
+
+  const length = this.passwordLength;
+
+  if (length < 6) return 1;
+
+  if (score === 1) return 1;
+
+  if (score === 2 && length >= 6) return 2;
+  if (score === 3 && length >= 10) return 3;
+
+  if (score === 4 && length >= 13) return 4;
+
+  return 2;
+}
 }
