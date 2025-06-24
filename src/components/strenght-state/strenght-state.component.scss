@@ -1,38 +1,52 @@
 @import "../../styles.scss";
 
-.strenght-state-div{
-    width: 311px;
-    height: 60px;
+.strenght-state-div {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    color: white;
     background-color: $darkgray;
-    margin: 1rem 0 1rem 0;
-    padding: 0.5rem;
+    height: 72px;
+    margin: 2rem 0 4rem 0;
+    padding: 0 2rem 0 2rem;
+    font-family: $font;
 
-    @media screen and (min-width: $tablet){
-        width: 100%;
-        margin-bottom: 3rem;
+    @media screen and (max-width: $tablet){
+        margin: 2rem 0 2rem 0;
     }
 }
 
 .strenght-state-paragraph{
     font-size: 20px;
     font-weight: 700;
-    margin-left: 1rem;
     color: $gray;
+    letter-spacing: 0.2rem;
 }
 
-.strenght-state-options-div{
+.strenght-state-options-div {
     display: flex;
-    justify-content: space-evenly;
-    width: 64px;
-    height: 28px;
+    gap: 0.5rem;
 }
 
-.strenght-state-option{
-    height: 28px;
+.strenght-state-option {
     width: 10px;
-    border: 2px solid $white;
+    height: 30px;
+    border: 1px solid white;
+    background-color: transparent;
+}
+
+.box-red {
+    background-color: #f00;
+}
+
+.box-yellow {
+    background-color: #f2e532;
+}
+
+.box-green {
+    background-color: #a4ffaf;
+}
+
+.box-empty {
     background-color: transparent;
 }

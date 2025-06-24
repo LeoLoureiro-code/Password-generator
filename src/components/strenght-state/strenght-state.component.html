@@ -1,11 +1,10 @@
 <div class="strenght-state-div">
-    <p class="strenght-state-paragraph">
-        STRENGTH
-    </p>
+    <p class="strenght-state-paragraph">STRENGTH</p>
     <div class="strenght-state-options-div">
-        <div class="strenght-state-option"></div>
-        <div class="strenght-state-option"></div>
-        <div class="strenght-state-option"></div>
-        <div class="strenght-state-option"></div>
+        <div
+            class="strenght-state-option"
+            *ngFor="let box of [1, 2, 3, 4]; let i = index"
+            [ngClass]="getBoxColor(i + 1)">
+        </div>
     </div>
 </div>
