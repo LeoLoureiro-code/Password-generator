@@ -37,6 +37,7 @@ Screenshot soon
 
 ## 🏗️ Project Structure
 
+```
 src/
 ├── app/
 │ └── app.component.ts
@@ -50,7 +51,7 @@ src/
 │ └── generator/
 │ └── generator.service.ts
 └── assets/
-
+```
 
 ---
 
