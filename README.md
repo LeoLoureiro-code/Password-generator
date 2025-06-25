@@ -1,32 +1,111 @@
+# 🔐 Angular Password Generator
 
-# PasswordGenerator
+A modern password generator built with Angular. Allows users to customize the length and character types (uppercase, lowercase, numbers, symbols), generate strong passwords, and copy them to the clipboard. Includes a visual password strength indicator.
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.1.1.
+---
 
-## Development server
+## 📸 Preview
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Screenshot soon
 
-## Code scaffolding
+---
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## 🧩 Features
 
-## Build
+- ✅ Secure password generation
+- ✅ Customizable options:
+  - Uppercase letters
+  - Lowercase letters
+  - Numbers
+  - Symbols
+- ✅ Adjustable length using a slider
+- ✅ Visual password strength meter
+- ✅ Copy password to clipboard
+- ✅ Modular architecture (standalone components + shared service)
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+---
 
-## Running unit tests
+## ⚙️ Technologies Used
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+- [Angular](https://angular.io/) 17+
+- RxJS
+- HTML / SCSS
+- `navigator.clipboard` API
+- Standalone Components (modern Angular architecture)
 
-## Running end-to-end tests
+---
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+## 🏗️ Project Structure
 
-## Further help
+src/
+├── app/
+│ └── app.component.ts
+├── components/
+│ ├── checkbox/
+│ ├── password-field/
+│ ├── slider/
+│ ├── strength-state/
+│ └── generator/
+├── services/
+│ └── generator/
+│ └── generator.service.ts
+└── assets/
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
-=======
-# Password-generator
-A simple and customizable password generator built with Angular. It allows users to generate strong, secure passwords based on selected criteria such as length, inclusion of uppercase/lowercase letters, numbers, and special characters.
 
+---
+
+## 🚀 Getting Started
+
+1. Clone the repository:
+
+```bash
+git clone https://github.com/yourusername/password-generator-angular.git
+cd password-generator-angular
+```
+
+2. Install dependencies:
+
+```bash
+npm install
+```
+
+Run the development server:
+
+```bash
+ng serve
+```
+
+4.Open your browser at:
+  http://localhost:4200/
+
+## Core Logic
+
+* GeneratorService manages shared state and logic.
+
+* Components (slider, checkbox, password-field, strength-state) interact via getters, setters, or observables.
+
+* When generating a password, the app ensures at least one character from each selected type is included.
+
+* Clipboard copy uses the navigator.clipboard.writeText() API.
+
+## Current Status
+
+* Password generation
+
+* Copy to clipboard
+
+* Strength indicator
+
+* Modular component structure
+
+* Mobile responsiveness
+
+## Future improvements 
+
+* Light/dark theme support
+
+ * Animated feedback and transitions
+
+ * Export password history
+
+ * User settings persistence
